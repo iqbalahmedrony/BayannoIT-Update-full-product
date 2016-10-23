@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+  <loc>http://52-it.com/</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/index.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/index.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/aboutus.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/services.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/work.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/sitemap.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-red/contact.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/aboutus.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/services.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/work.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/sitemap.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/bayannoit-green/contact.html</loc>
+</url>
+<url>
+  <loc>http://52-it.com/index.html</loc>
+</url>
+</urlset>

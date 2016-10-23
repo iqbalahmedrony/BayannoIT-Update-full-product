@@ -1,0 +1,1178 @@
+<!DOCTYPE HTML>
+
+<!--[if IE 8]> <html class="ie8 no-js"> <![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Bayanno Information Technology | Home Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="bayannoit-img/favicon.ico" /> 
+
+	<!-- CSS -->
+
+	<link href="css/forward.css" rel="stylesheet" media="screen">
+
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+
+	<link href="css/bootstrap-tooltip.css" rel="stylesheet" media="screen">
+
+	<link href="css/superfish.css" rel="stylesheet" media="screen">
+
+	<link href="css/sequencejs-theme.modern-slide-in.css" rel="stylesheet" media="screen">
+
+	<!--[if lt IE 9]><link href="css/sequencejs-theme.modern-slide-in.ie.css" rel="stylesheet" media="screen"><![endif]-->
+
+	<link href="css/jquery.jcarousel.css" rel="stylesheet" media="screen">
+
+	<link href="css/mediaelementplayer.css" rel="stylesheet" media="screen">
+
+	<link href="css/flexslider.css" rel="stylesheet" media="screen">
+
+	<link href="css/camera.css" rel="stylesheet" media="screen">
+
+	<link href="css/jquery.fancybox.css" rel="stylesheet" media="screen">
+
+	<link href="css/jquery.quicksand.css" rel="stylesheet" media="screen">
+
+	<link href="css/ui.totop.css" rel="stylesheet" media="screen">
+
+	<link href="css/jquery.jgrowl.css" rel="stylesheet" media="screen">
+
+	<link href="css/jquery.timeliner.css" rel="stylesheet" media="screen">
+
+    
+
+    <!-- Lib -->
+
+	<script src="lib/jquery-1.8.2.min.js"></script>
+
+	<script src="lib/jquery.easing.1.3.js"></script>
+
+    <script src="lib/jquery.mobile.customized.min.js"></script>
+
+    <script src="lib/bootstrap.min.js"></script>
+
+    <script src="lib/bootstrap-tooltip.js"></script>
+
+    <script src="lib/superfish.js"></script>
+
+    <script src="lib/sequence.jquery.min.js"></script>
+
+    <script src="lib/jquery.jcarousel.min.js"></script>
+
+    <script src="lib/jquery.cycle.all.js"></script>
+
+    <script src="lib/modernizr.custom.js"></script>
+
+    <script src="lib/mediaelement-and-player.min.js"></script>
+
+    <script src="lib/jquery.tweet.js"></script>
+
+    <script src="lib/jquery.flexslider.js"></script>
+
+    <script src="lib/jquery.camera.js"></script>
+
+    <script src="lib/jquery.fancybox.js"></script>
+
+    <script src="lib/jquery.quicksand.js"></script>
+
+    <script src="lib/jquery.validate.js"></script>
+
+    <script src="lib/jquery.ui.totop.js"></script>
+
+    <script src="lib/jquery.jgrowl.js"></script>
+
+    <script src="lib/jquery.timeliner.js"></script>
+
+    <script src="lib/forward.js"></script>
+
+    
+
+    <!-- Extra Script -->
+
+
+
+    <script type="text/javascript">
+
+	
+
+		/* Sequence Slider
+
+		============================== */
+
+		/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+
+		  if (!pageYOffset) window.scrollTo(0, 1);
+
+		}, 1000);
+
+		
+
+		$(document).ready(function(){
+
+			var options = {
+
+				nextButton: true,
+
+				prevButton: true,
+
+				animateStartingFrameIn: true,
+
+				autoPlayDelay: 3000,
+
+				preloader: true,
+
+				pauseOnHover: false,
+
+				preloadTheseFrames: [1],
+
+				preloadTheseImages: [
+
+					"images/tn-model1.png",
+
+					"images/tn-model2.html",
+
+					"images/tn-model3.html"
+
+				]
+
+			};
+
+	
+
+			var sequence = $("#sequence").sequence(options).data("sequence");
+
+	
+
+			sequence.afterLoaded = function(){
+
+				$("#nav").fadeIn(100);
+
+				$("#nav li:nth-child("+(sequence.settings.startingFrameID)+") img").addClass("active");
+
+			}
+
+	
+
+			sequence.beforeNextFrameAnimatesIn = function(){
+
+				$("#nav li:not(:nth-child("+(sequence.nextFrameID)+")) img").removeClass("active");
+
+				$("#nav li:nth-child("+(sequence.nextFrameID)+") img").addClass("active");
+
+			}
+
+			
+
+			$("#nav li").click(function(){
+
+				$(this).children("img").removeClass("active").children("img").addClass("active");
+
+				sequence.nextFrameID = $(this).index()+1;
+
+				sequence.goTo(sequence.nextFrameID);
+
+			});
+
+		});
+
+		
+
+		/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+
+           if (!pageYOffset) window.scrollTo(0, 1);
+
+         }, 1000);
+
+         
+
+         $(document).ready(function(){
+
+         	var options = {
+
+         		autoPlay: true,
+
+         		nextButton: true,
+
+         		prevButton: true,
+
+         		animateStartingFrameIn: true,
+
+         		autoPlayDelay: 3000,
+
+				pauseOnHover: true,
+
+         		transitionThreshold: 500
+
+         	};
+
+         
+
+         	var sequence = $("#sequence").sequence(options).data("sequence");
+
+         
+
+         	sequence.afterLoaded = function(){
+
+         		$("#nav").fadeIn(100);
+
+         		$("#nav li:nth-child("+(sequence.settings.startingFrameID)+") img").addClass("active");
+
+         	}
+
+         
+
+         	sequence.beforeNextFrameAnimatesIn = function(){
+
+         		$("#nav li:not(:nth-child("+(sequence.nextFrameID)+")) img").removeClass("active");
+
+         		$("#nav li:nth-child("+(sequence.nextFrameID)+") img").addClass("active");
+
+         	}
+
+         	
+
+         	$("#nav li").click(function(){
+
+         		if(!sequence.active){
+
+         			$(this).children("img").removeClass("active").children("img").addClass("active");
+
+         			sequence.nextFrameID = $(this).index()+1;
+
+         			sequence.goTo(sequence.nextFrameID);
+
+         		}
+
+         	});
+
+		});
+
+		
+
+	</script>
+
+</head>
+
+
+
+<body>
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Start -->
+
+<div id="world">
+
+	<!-- Header -->
+
+    <header id="fw-header">
+
+    	<!-- Header Top -->
+
+    	<div id="fw-header-top">
+
+        	<div class="container">
+
+            	<div class="row">
+
+                    <div class="span12">
+
+                        <div id="fw-logo"><a href="index.html"><img src="media/logo.png" alt="Bayanno Information Technology Logo" /></a></div>
+
+                        <div id="fw-header-call">CALL US AT : <span>+880 1553 525252</span></div>
+
+                        <div id="fw-header-socialmedia">
+
+                        	<ul>
+
+                            	<li><a href="http://www.facebook.com/bayannoit"><img src="media/socialmedia/facebook.png" alt="Bayanno Information Technology Facebook icon" /></a></li>
+
+                            	<li><a href="http://www.twitter.com/bayannoit"><img src="media/socialmedia/twitter.png" alt="Bayanno Information Technology Twitter icon" /></a></li>
+
+                            	<li><a href="http://www.flickr.com/bayannoit"><img src="media/socialmedia/flickr.png" alt="Bayanno Information Technology Flickr icon" /></a></li>
+
+                            	<li><a href="http://www.skype.com/bayannoit"><img src="media/socialmedia/skype.png" alt="Bayanno Information Technology Skype icon" /></a></li>
+
+                            	<li><a href="http://www.googleplus.com/bayannoit"><img src="media/socialmedia/google.png" alt="Bayanno Information Technology Google Plus icon" /></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="clearfix"></div>
+
+        		</div>
+
+        	</div>
+
+        </div>
+
+    	<!-- Header Red Area -->
+
+        <div id="fw-header-redarea">
+
+        	<div id="fw-header-redarealight">
+
+                <div id="fw-header-redareacameo">
+
+                    <div id="fw-header-redareacontent">
+
+                        <!-- Navigation -->
+
+                        <div id="fw-menu">
+
+                        	<ul class="sf-menu" id="fw-desktop-menu">
+
+                            	<li class="active"><a href="index.html">BayannoIT Room</a></li>
+
+                                <li><a href="aboutus.html">About Us</a></li>
+
+                            	<li><a href="services.html">Services</a></li>
+
+                            	<li><a href="work.html">Work</a></li>
+
+                                <li><a href="sitemap.html">Sitemap</a></li>
+
+                            	<li><a href="contact.html">Contact</a></li>
+
+                            </ul>
+
+                            
+
+                            <!-- Mobile Menu -->
+
+                            <div id="fw-mobile-menu">
+
+                            	<div id="fw-mobile-menu-title">Navigation</div>
+
+                                <select id="fw-mobile-menu-list" onChange="location = this.value">
+
+										<option value="index.html">- BayannoIT Room</option>
+
+										<option value="aboutus.html">About Us</option>
+
+										<option value="services.html">Services</option>
+
+										<option value="work.html">Work</option>
+
+										<option value="sitemap.html">Sitemap</option>
+
+										<option value="contact.html">Contact</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- End Mobile Menu -->
+
+                        </div>
+
+                        <!-- End Navigation -->
+
+                        
+
+                        <!-- Slideshow -->
+
+<div id="fw-slideshow">
+
+                            <div id="sequence-container">
+
+                                <div id="sequence-content">
+
+                                    <img class="prev" src="media/nav-prev.png" alt="Previous Frame" />
+
+                                    <img class="next" src="media/nav-next.png" alt="Next Frame" />
+
+                                    
+
+                                        
+
+                                    <div id="sequence">
+
+                                        <ul>
+
+                                            <li id="slideshow1">
+
+                                                <h2 class="title animate-in">Logo Design</h2>
+
+                                                <p class="subtitle">Our logo design works are unique. Working with us will be hassle free and refreshing. We have created 100s of logos and corporate identities for companies from around the world. Our company logo creation process is fairly simple and have only one direction - High quality!</p>
+
+                                                <img class="model animate-in" src="asset/slideshow/bayannoit-logo-item.png" alt="logo-item" />
+
+                                            </li>
+
+                                            <li id="slideshow2">
+
+                                                <h2 class="title">Web Development</h2>
+
+                                                <p class="subtitle">Good web design can make a world of difference and can launch your business quickly. This reason; our products are designed and created specifically for the client and client's client.</p>
+
+                                                <img class="model" src="asset/slideshow/sequence-item2.png" alt="Web Development" />
+
+                                            </li>
+
+                                            <li id="slideshow3">
+
+                                                <h2 class="title">Print & Stationary</h2>
+
+                                                <p class="subtitle">Sales kit and brochures are the most interactive medium via which you can get to create a strong footprint among your targeted customer group.</p>
+
+                                                <img class="model" src="asset/slideshow/sequence-item3.png" alt="Print & Stationary" />
+
+                                            </li>
+
+                                            <li id="slideshow4">
+
+                                                <h2 class="title">Software</h2>
+
+                                                <p class="subtitle">52-IT provides professional Software development and maintenance services. Our skilled developers accomplish various Software Projects.52-IT has a large pool of resources and the required business and technical expertise to develop SOftware of any complexity.</p>
+
+                                                <img class="model" src="asset/slideshow/sequence-item1.png" alt="Software" />
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>                        
+
+                        <!-- Banner -->
+
+                        <div id="fw-banner">
+
+                        </div>
+
+                        <!-- End Banner -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        	<div id="fw-header-redarea-separator"></div>
+
+        </div>
+
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Content -->
+
+    <div id="content">
+
+        <div class="container">
+
+        <div class="row">
+
+            <h2 class="sectiontitle">Our Faces</h2>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/anik.jpg" alt="Anik Alam" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Anik Alam</div>
+
+                    <p class="fw-banner-desc">Programmer </p>
+
+                </div>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/razon.jpg" alt="Razon Ahmed" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Razon Ahmed</div>
+
+                    <p class="fw-banner-desc">Programmer </p>
+
+                </div>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/jewel.jpg" alt="Jubayed Hossain" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Jubayed Hossain</div>
+
+                    <p class="fw-banner-desc">Photo Editor</p>
+
+                </div>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/jia.jpg" alt="Ziaur Rahman" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Ziaur Rahman</div>
+
+                    <p class="fw-banner-desc">Content Editor</p>
+
+                </div>           
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/sony.jpg" alt="Syedul Islam" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Syedul Islam</div>
+
+                    <p class="fw-banner-desc">Office Management</p>
+
+                </div>
+
+           </div>
+
+        <div class="row">
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/sadhibnerahmat.jpg" alt="Sadh Ibne Rahmat" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Sadh Ibne Rahmat</div>
+
+                    <p class="fw-banner-desc">Android Application Developer</p>
+
+                </div>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/mamun.jpg" alt="Mamunuzzaman" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Mamunuzzaman</div>
+
+                    <p class="fw-banner-desc">Developer</p>
+
+                </div>
+
+                <div class="span13 fw-banner-container-face">
+
+                    <div class="fw-banner-image">
+
+                        <img src="asset/photo/rony.jpg" alt="Iqbal Ahmed" />
+
+                    </div>
+
+                    <div class="fw-banner-title fw-banner-blue">Iqbal Ahmed</div>
+
+                    <p class="fw-banner-desc">Frontend Developer</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    	<div class="container">
+
+        	<div class="row">
+
+            	<div class="span12">
+
+    				<h2 class="sectiontitle">Know Bayanno Information Technology</h2>
+
+                    <p>52IT is a communication firm consisting of creative and multi-talented Graphics designers, Software Programmer, web designers and web developers. We provide the full Print and Stationary, Inventory Software, Software Solution, web package including web design, web development, web application and web services. As a complete web solution team, 52IT offers customer-oriented web design services and delivers you creative and effective results.  
+
+We believe in a unique, upscale and innovative work environment to provide better customer satisfaction through quality innovation. We continually strive to build such an atmosphere, which will spawn innovation in delivering higher value for money to our customers.</p><a href="aboutus.html" class="fw-more fw-goldtored">Go On &raquo;</a>
+
+                </div>
+
+			</div>
+
+            
+
+        	<div class="row">
+
+            	<div class="span12">
+
+    				<h2 class="sectiontitle">OUR WORK <span><a href="work.html" class="fw-more fw-goldtored">Show all &raquo;</a></span></h2>
+
+                    <ul id="fw-carousel-project" class="fw-carousel jcarousel-skin-tango">
+
+                        <li>
+
+                        	<div class="fw-carousel-image">
+
+                        		<a class="fw-lightbox" href="asset/photo/milhana-logo-big.jpg" title="Milhana Fashion"><img src="asset/photo/milhana-logo.jpg" alt="" /></a>
+
+                            </div>
+
+                        	<div class="fw-carousel-description">
+
+                        		<h5 class="fw-textgold">Milhana Fashion</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred"><span><a class="fw-more fw-goldtored" href="http://www.facebook.com/milhanafashionbd" title="Milhana Fashion">Logo Design</a></span></p>
+
+                                <p>All Kinds Of Garments Stock Lot Products Buyer & Seller.Located on Mirpur,Dhaka, Bangladesh  </p>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                        	<div class="fw-carousel-image">
+
+                        		<a class="fw-lightbox" href="asset/photo/coolcity-logo-big.jpg" data-fancybox-group="gallery" title="cool city shopping mall and beauty parlour"><img src="asset/photo/coolcity-logo.jpg" alt="cool city shopping mall and beauty parlour" /></a>
+
+                            </div>
+
+                        	<div class="fw-carousel-description">
+
+                        		<h5 class="fw-textgold">Cool City</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred"> <span><a class="fw-more fw-goldtored" href="http://www.coolcitybd.com" title="Cool City Shopping Mall and Beauty Parlour">Web Site</a></span></p>
+
+                                <p>Cool City Shopping Mall and Beauty Parlour.Located on Charpara, Mymensingh, Bangladesh </p>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                        	<div class="fw-carousel-description">
+
+                                <div class="fw-cycle-slider">
+
+                                    <ul>
+
+                                        <li><a class="fw-lightbox" href="asset/photo/web-template-home-01.jpg" data-fancybox-group="gallery2" title="Angel, Web Template"><img src="asset/photo/web-template-home-01-small.jpg" alt="Web Template Design for Angel"></a></li>
+
+                                        <li><a class="fw-lightbox" href="asset/photo/web-template-home-02-big-crystal-sharp.jpg" data-fancybox-group="gallery2" title="Crystal Sharp"><img src="asset/photo/web-template-home-02-small-crystal-sharp.jpg" alt="Crystal Sharp, Web Template"></a></li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        	<div class="fw-carousel-description">
+
+                        		<h5 class="fw-textgold">Web Template Design</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred">PSD format, Adobe Photoshop</p>
+
+                                <p>Creative and Unique design whose are depending on Marketing</p>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                        	<div class="fw-carousel-image">
+
+                        		<a class="fw-lightbox" href="asset/photo/Inmas-Mymensingh-big.jpg" data-fancybox-group="gallery" title="Institute of Nuclear Medicine and Allied Sciences(INMAS)"><img src="asset/photo/Inmas-Mymensingh.jpg" alt="Institute of Nuclear Medicine and Allied Sciences(INMAS)" /></a>
+
+                            </div>
+
+                        	<div class="fw-carousel-description">
+
+                        		<h5 class="fw-textgold">INMAS (Mymensingh)</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred"><span><a class="fw-more fw-goldtored" href="http://www.inmasmym.org/" title="Institute of Nuclear Medicine and Allied Sciences (INMAS)">Web Site</a></span></p>
+
+                                <p>Institute of Nuclear Medicine and Allied Sciences.Under Bangladesh Atomic Energy Commission.  </p>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                        	<div class="fw-carousel-image">
+
+                        		<a class="fw-lightbox" href="asset/photo/businesscard-big.jpg" data-fancybox-group="gallery" title="Milhana Fashion & Frieds Real Estate Business Card "><img src="asset/photo/businesscard.jpg" alt="Milhana Fashion & Frieds Real Estate Business Card " /></a>
+
+                            </div>
+
+                        	<div class="fw-carousel-description">
+
+                        		<h5 class="fw-textgold">Print Stationary Kids</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred">Business Card<span></p>
+
+                                <p>Milhana Fashion & Frieds Real Estate Business Card </p>
+
+                            </div>
+
+                        </li>
+
+                        
+
+                    </ul>
+
+                </div>
+
+			</div>
+
+            
+
+        	<div class="row">
+
+            	<div class="span4">
+
+    				<h2 class="sectiontitle">Announce</h2>
+
+                    <div class="accordion" id="accordion2">
+
+                        <div class="accordion-group">
+
+                            <div class="accordion-heading">
+
+                             <a class="accordion-toggle" data-parent="#accordion2" data-toggle="collapse" href="#collapseOne">Domain</a>
+
+                            </div>
+
+                            <div id="collapseOne" class="accordion-body collapse in">
+
+                                <div class="accordion-inner">
+
+                                	To build any website, you must first choose and register a domain name. In essence, a domain name is the address of your website on the Internet.</br>
+
+Domain Price is 1100 to 1200/=  only for .com/.net/.info
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-group">
+
+                            <div class="accordion-heading">
+
+                                <a class="accordion-toggle" data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo">Hosting</a>
+
+                            </div>
+
+                
+
+                            <div id="collapseTwo" class="accordion-body collapse">
+
+                            	<div class="accordion-inner">
+
+                                	In order to begin building a presence on your domain, you’re going to need hosting. To put it simply, web hosting is space on a server where the files of your website are stored.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+						
+
+                        <div class="accordion-group">
+
+                            <div class="accordion-heading">
+
+                                <a class="accordion-toggle" data-parent="#accordion2" data-toggle="collapse" href="#collapseThree">Special Offer (For this summer) </a>
+
+                            </div>
+
+                
+
+                            <div id="collapseThree" class="accordion-body collapse">
+
+                            	<div class="accordion-inner">
+
+                                	Make your own web site only 8000/=</br>
+
+** condition apply
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>                        
+
+                    </div>
+
+                </div>
+
+                <div class="span4">
+
+    				<h2 class="sectiontitle">Event Management</h2>
+
+                        	<div class="fw-carousel-descrip">
+
+                                <div class="fw-cycle-slider">
+
+                                    <ul>
+
+                                        <li class="img-even"><a class="fw-lightbox" href="asset/photo/eventwbirthday-big.jpg" data-fancybox-group="gallery2" title="Angel, Web Template"><img src="asset/photo/eventwbirthday.jpg" alt="Web Template Design for Angel"> </a>
+
+                        	<div class="fw-carousel-description even-text">
+
+                        		<h5 class="fw-textgold">Birthday party</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred">Mymensingh Birth Day</p>
+
+                            </div>                                        
+
+                                        </li>
+
+                                        <li class="img-even"><a class="fw-lightbox" href="asset/photo/eventwparty.jpg" data-fancybox-group="gallery2" title="Crystal Sharp"><img src="asset/photo/eventwparty.jpg" alt="Crystal Sharp, Web Template"></a>
+
+                        	<div class="fw-carousel-description even-text">
+
+                        		<h5 class="fw-textgold">Office Party</h5>
+
+                                <p class="fw-carousel-description-subtitle fw-textred"> Mymensingh Mymensingh Event Party</p>
+
+                            </div>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                    
+
+                </div>
+
+                <div class="span4">
+
+    				<h2 class="sectiontitle">Facebook Like</h2>
+
+                    <div class="fb-like" data-href="https://www.facebook.com/bayannoit" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+					
+
+                </div>
+
+			</div>
+
+        	<div class="row">
+
+            	<div class="span6">
+
+    				<h2 class="sectiontitle">TESTIMONIALS</h2>
+
+                    <ul id="fw-carousel-testimonial" class="fw-carousel jcarousel-skin-tango">
+
+                    	<li>
+
+                        	<div class="fw-testimonial">
+
+                            	<div class="fw-testimonial-text">
+
+                                	<p><b>Web design & development for a INMAS in Mymensingh</b></br>“Superb immediacy in communication. Very professional IT Firm and supportive service. Thank you!”
+
+</p>
+
+                                </div>
+
+                            	<div class="fw-testimonial-name">
+
+                                	<p>
+
+                                    <img src="asset/photo/mynulsir.jpg" alt="Prof Dr S M Moinul Islam" />
+
+                                    <span>Prof Dr S M Moinul Islam</span>Director</br>INMAS (Mymensingh)</br><a href="http://www.inmasmym.org/manpower/" title="Institute of Nuclear Medicine and Allied Sciences (INMAS)" target="_blank" style="text-decoration:underline">inmasmym.org</a></p>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                            </div>
+
+                        </li>
+
+                    	<li>
+
+                        	<div class="fw-testimonial">
+
+                            	<div class="fw-testimonial-text">
+
+                                	<p>"Just Go There web design service is a very professional organization that puts the customer first. The service is superb, fast and accurate. We have been with them for several years now, and would not think of going anywhere else."</p>
+
+                                </div>
+
+                            	<div class="fw-testimonial-name">
+
+                                <p>
+
+                                    <img src="asset/photo/hadisir.jpg" alt="Dr Hadi Khan" />
+
+                                	<span>Dr. Hadi Khan</span>Professor</br>BAU </br>(Dpt. of Pathology)</br><a href="http://www.hadivetpath.com" title="Institute of Nuclear Medicine and Allied Sciences (INMAS)" target="_blank" style="text-decoration:underline">hadivetpath.com</a></p>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                
+
+                
+
+                
+
+                <div class="span6">
+
+    				<h2 class="sectiontitle">NEWSLETTER</h2>
+
+                    <p>Subscribe to our email newsletter for useful tips and valuable resources sent out every second Monday.</p>
+
+                    <form>
+
+                        <div id="fw-newsletter" class="input-append">
+
+                            <input class="fw-newsletter-textfield" type="text" placeholder="Enter your email address..">
+
+                            <button class="fw-newsletter-btn" type="button">Submit</button>
+
+                        </div>
+
+                    </form>
+
+                    <p class="fw-notes"><span class="fw-textgold">*</span> Check your spam folder if the mail does not arrive.</p>
+
+                </div>
+
+			</div>
+
+    	</div>
+
+    </div>
+
+    <!-- Content -->
+
+    <!-- Footer -->
+
+    <footer id="fw-footer">
+
+    	<div id="fw-footer-line">
+
+        	<div id="fw-footer-content">
+
+        		<div id="fw-footer-wrapper">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="spanlan">
+
+                                <h4 class="sectiontitle">ভাষা শহীদ</h4>
+
+                                <div class="fw-footer-post">
+
+                                    <div class="fw-footer-post-image">
+
+                                        <a href="../red/blog-detail.html"><img src="asset/photo/barkat.jpg" alt="" /></a>
+
+                                    </div>
+
+                                    <div class="fw-footer-post-desc">
+
+                                        <a href="#">শফিউর রহমান (ভাষা শহীদ)</a>
+
+                                        <p>১৬ই জুন ১৯২৭ সালে ভারতের পশ্চিম বঙ্গের মুর্শিদাবাদ জেলার কান্দি মহাকুমার ভরতপুর থানার বাবলা নামক একটি ছোট গ্রামে</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="fw-footer-post">
+
+                                    <div class="fw-footer-post-image">
+
+                                        <a href="../red/blog-detail.html"><img src="asset/photo/salam.jpg" alt="" /></a>
+
+                                    </div>
+
+                                    <div class="fw-footer-post-desc">
+
+                                        <a href="#">আবদুস সালাম (ভাষা শহীদ)</a>
+
+                                        <p>জন্মঃ ১৯২৫ সালে ফেনীর দাগনভূঁইয়া উপজেলার লক্ষণপুর গ্রামে</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="fw-footer-post">
+
+                                    <div class="fw-footer-post-image">
+
+                                        <a href="../red/blog-detail.html"><img src="asset/photo/jabbar.jpg" alt="" /></a>
+
+                                    </div>
+
+                                    <div class="fw-footer-post-desc">
+
+                                        <a href="#">আবদুল জব্বার (ভাষা শহীদ)</a>
+
+                                        <p>জন্মঃ ২৬ আশ্বিন ১৩২৬ বাংলা, ১৯১৯ খ্রিস্টাব্দ, পাঁচাইর গ্রাম, গফরগাঁও, ময়মনসিংহ জেলা</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="fw-footer-post">
+
+                                    <div class="fw-footer-post-image">
+
+                                        <a href="../red/blog-detail.html"><img src="asset/photo/rafik.jpg" alt="" /></a>
+
+                                    </div>
+
+                                    <div class="fw-footer-post-desc">
+
+                                        <a href="#">ভাষা শহীদ রফিক (ভাষা শহীদ)</a>
+
+                                        <p>জন্মঃ ১৯২৬ সালের ৩০শে অক্টোবর মানিকগঞ্জ জেলার পারিল গ্রাম বতর্মানে রফিকনগর, ইউনিয়ন-বলধারা, থানা-সিঙ্গাইরে</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="fw-footer-post">
+
+                                    <div class="fw-footer-post-image">
+
+                                        <a href="../red/blog-detail.html"><img src="asset/photo/shafiur.jpg" alt="" /></a>
+
+                                    </div>
+
+                                    <div class="fw-footer-post-desc">
+
+                                        <a href="#">শফিউর রহমান (ভাষা শহীদ)</a>
+
+                                        <p>জন্মঃ ২৪শে জানুয়ারী ১৯১৮ সালে কোননগর, হুগলী, চব্বিশ পরগণা, পশ্চিমবঙ্গে</p>
+
+                                    </div>
+
+                            	</div>
+
+                            </div>
+
+                            <div class="span3">
+
+                                <h4 class="sectiontitle">CONTACT INFO</h4>
+
+                                <div class="fw-contactinfo fw-contactinfo-address">Hasnain Plaza (2nd floor), 7 Madon Babu Road, 18 Bari Building, Mymensingh-2200</div>
+
+                                <div class="fw-contactinfo fw-contactinfo-phone"><b>+880 91 52052 </br> +880 1553 525252</br>+880 1716 364218</b></div>
+
+                                <div class="fw-contactinfo fw-contactinfo-mail"><a href="mailto:hello@sandyricardo.com?Subject=Hello%20Sandy" class="fw-goldtored">info@52-it.com</a> </br> <a href="mailto:hello@sandyricardo.com?Subject=Hello%20Sandy" class="fw-goldtored">bayannoit@gmail.com</a></div>
+
+                            </div>
+
+                            <div class="spanfooter">
+
+                                <h4><img src="asset/photo/logo-footer.png" alt="" /></h4>
+
+                                <p>Move your business <span class="fw-textred">forward</span> with professional and elegant template designed by <span class="fw-textred">Utpol Quraishy</span> and <span class="fw-textred">Iqbal Ahmed</span></p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+            	</div>
+
+            </div>
+
+        </div>
+
+        <div id="fw-copyright">
+
+        	<div class="container">
+
+            	<div class="row">
+
+                      <div class="footer_name"></div>
+
+                      <p align="center"><span id="year">2014</span> &copy; www.52-it.com</p>
+
+            	</div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- End Footer -->
+
+</div>
+
+<!-- End -->
+
+</body>
+
+</html>
+

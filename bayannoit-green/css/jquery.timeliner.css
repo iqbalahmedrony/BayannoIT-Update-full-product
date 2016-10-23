@@ -1,0 +1,219 @@
+div#timelineContainer {
+	border-left:1px solid #750000;
+	margin-left: 6px;
+	position: relative;
+}
+div.timeline-circle {
+	width: 13px;
+	height: 13px;
+	background: url(../media/timeline-circle.png) no-repeat center center;
+	position: absolute;
+	z-index: 5;
+}
+div.top-circle {
+	top: 0;
+	left: -7px;
+}
+div.bottom-circle {
+	bottom: 0;
+	left: -7px;
+}
+
+div.timelineToggle {
+	float:right;
+	margin-right:0;
+	white-space:nowrap;
+}
+
+a.expandAll {
+	background-color: #000000;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 6px 10px;
+	cursor: pointer;
+}
+
+a.expandAll:hover {
+	background: #D54545
+}
+
+div.timelineMajor {
+	margin:0 0 20px;
+	padding-left: 29px;
+}
+	.timelineMajorMarker {
+		position: relative;
+	}
+	.timelineMajor h3 {
+		color:#ffd9b2!important;
+		cursor: pointer;
+		margin:0 0 10px!important;
+		padding: 10px 20px;
+		display: inline-block;
+		background: #300404;
+		border: solid 1px #550606;
+		line-height: 22px;
+		width: 100px;
+		-webkit-border-radius: 4px;
+		   -moz-border-radius: 4px;
+				border-radius: 4px;
+	}
+
+	.timelineMajor h3 span {
+		font-size: 16px;
+		color: #fff;
+		display: block
+	}
+	
+	.timelineMajor .left-circle {
+		left: -36px;
+		top: 50%;
+		margin-top: -10px;
+	}
+	
+	.timelineMajor .timeline-arrow {
+		position: absolute;
+		top: 50%;
+		left: -8px;
+		margin-top: -12px;
+		width: 9px;
+		height: 17px;
+		background: url(../media/timeline-arrow.png) no-repeat center center;
+		z-index: 5;
+	}
+
+dl.timelineMinor {
+	position:relative;
+	padding-left: 20px;
+	margin-top: 0;
+}
+
+	.timelineMinor dt {
+		list-style-type:none!important;
+		white-space:nowrap;
+		font-size: 14px;
+	}
+
+		.timelineMinor dt a {
+			color: #ffd9b2;
+			cursor:pointer;
+		}
+
+		.timelineMinor dt a.closed {
+			margin-left:0;
+		}
+
+		.timelineMinor dt a.open {
+			color:#ffd9b2;
+		}
+
+		.timelineMinor dt a:hover {
+			color:#d54545;
+		}
+
+		.timelineMinor dt span {
+			font-size: 11px;
+			font-style: italic;
+			color: #d54545;
+			font-weight: normal;
+			display: block;
+		}
+		
+		.timelineMinor dd h3 {
+			color:#FFF;
+			clear:both;
+			float:left;
+			font-size:1.5em!important;
+			margin:0;
+			white-space:nowrap;
+		}
+
+.timelineEvent {
+	padding-left: 20px;
+	margin: 0;
+}
+
+.timelineEvent p {
+	margin:6px 0 10px;
+}
+
+.timelineEvent h4 {
+	clear:left;
+	float:left;
+	font-size:1.4em!important;
+	font-weight:400;
+	margin:10px 0 0;
+	padding:0 0 0 20px!important;
+}
+
+.timelineEvent blockquote {
+	clear:left;
+	float:left;
+	padding:0 30px;
+	width:400px;
+}
+
+.timelineEvent blockquote * {
+	float:none;
+	width:400px;
+}
+
+.timelineEvent ul.moreInfo {
+	clear:left;
+	float:left;
+	line-height:1.2em;
+	list-style-type:none;
+	margin:0!important;
+	padding:0!important;
+	width:100%;
+}
+
+.timelineEvent ul.moreInfo li {
+	clear:left;
+	background:none!important;
+	font-size:1em!important;
+	line-height:1.5em;
+	margin:8px 0!important;
+	padding:0 0 0 20px!important;
+}
+
+	.timelineEvent ul.moreInfo li a:link,.timelineEvent ul.moreInfo li a:visited {
+		color:#7097af!important;
+	}
+
+	.timelineEvent ul.moreInfo li a:hover {
+		color:#7DBADF!important;
+	}
+
+.timelineEvent div.media {
+	float:right;
+	padding:0 0 12px;
+	width:300px;
+}
+
+	.timelineEvent .media img {
+		border:2px solid #000;
+		margin:0;
+	}
+
+	.timelineEvent .media p {
+		font-size:1.2em;
+		margin:0!important;
+		padding:0!important;
+	}
+
+	.timelineEvent .media a:link,.timelineEvent .media a:visited {
+		border:none!important;
+		color:#ab221b!important;
+	}
+
+	.timelineEvent .media a:hover {
+		color:#7DBADF!important;
+	}
+
+	.timelineEvent .media p span.source {
+		font-style:italic;
+	}

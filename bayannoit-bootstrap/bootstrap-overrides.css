@@ -1,0 +1,107 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url( '../../fonts/opensans/OpenSans-Regular.ttf' ) format("truetype");
+}
+
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url( '../../fonts/opensans/OpenSans-Light.ttf' ) format("truetype");
+}
+
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url( '../../fonts/opensans/OpenSans-Semibold.ttf' ) format("truetype");
+}
+
+@font-face {
+	font-family: 'Dolce';
+	src: url( '../../fonts/dolce/Dolce Vita Light.ttf' ) format("truetype");
+}
+
+body {
+	font-family: 'OpenSans';
+	font-size: 14px;
+	color: #454545;
+	background-image:url(../../images/bg.svg) top no-repeat;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+}
+
+a:focus {
+	outline: none;
+}
+
+li {
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'OpenSansLight';
+	color: #00b89d;
+	text-rendering: optimizelegibility;
+	font-weight: normal;
+}
+
+.btn {
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 8px 12px;
+	color: #777;
+	border-radius: 0 !important;
+}
+
+.navbar {
+	border-radius: 0 !important;
+	margin-bottom: 0;
+}
+	
+.navbar-default	{
+	background-color: transparent;
+	border: 0;
+}
+
+.navbar-fixed-top {
+	z-index: 9998;
+}
+
+.navbar-toggle {
+	margin-top: 12px;
+	background-color: #3a3e43;
+	float: left;
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #4b4f53;
+}
+
+.navbar-brand {
+	padding: 10px 15px;
+}
+
+.dropdown-menu {
+	box-shadow: none;
+}
+
+.caret {
+	opacity: 0.5;
+}
+
+blockquote small {
+	margin-top: 5px;
+}
+
+cite {
+	font-size: 11px;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
